@@ -16,6 +16,8 @@ chrome.storage.local.get( [ "authuser-number" ], function( result ) {
 
     objURL.searchParams.set( "authuser", authuser );
 
+    // czasem na linku xxx.com/lookup nadal trzeba wybrac konto
+    // @todo: zrobic specjalny warunek dla lookup 
     if ( /lookup/g.test( objURL.pathname ) ) {}
 
     let input = document.querySelector( "html body div form input" );
@@ -23,13 +25,12 @@ chrome.storage.local.get( [ "authuser-number" ], function( result ) {
     let preparedButton = document.createElement( "button" );
     let pElement = document.createElement( "p" );
 
+    // informacja zeby nikt sie nie przyczepil, ze zmieniamy linki bez powodu
     pElement.innerHTML = "<strong>UWAGA!</strong> Link został <strong>zmieniony</strong> przez wtyczkę \
     <span style=\"background-color: #1a2530; border-radius: 5px; padding: 5px 10px; color: #ffffff;\"><span style=\"color:#ECC94B;\">Meet</span>Extension</span>.\
     ";
     pElement.style = "overflow-wrap: break-word;font-size: 1.5em;font-weight: 500;";
-
-
-
+    
     aElement.href = objURL.href;
 
     preparedButton.style = input.style.cssText;

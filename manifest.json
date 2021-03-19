@@ -1,0 +1,31 @@
+{
+	"manifest_version": 3,
+
+	"name": "MeetUpgrader3000",
+	"description": "Wkurwia Cie zmienianie konta na Meecie? Poczujesz ulgę instalując te rozszerzenie",
+    "author": "Redssu",
+	"version": "0.0.1",
+
+    "action" : {
+        "default_icon" : {
+            "256" : "icon.png"
+        },
+        "default_title": "Otwórz ustawienia",
+        "default_popup": "entryPoint.html"
+    },
+
+    "icons" : {
+        "256" : "icon.png"
+    },
+
+    "content_scripts" : [
+        {
+            "matches" : [ "*://liblink.pl/*" ],
+            "js" : [ "replacer.js" ]
+        }
+    ],
+
+	"permissions": [
+		"storage"
+	]
+}

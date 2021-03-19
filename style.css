@@ -1,0 +1,87 @@
+@font-face {
+	font-family: "din";
+	font-size: 700;
+	src: url( "din-bold.ttf" );
+}
+
+@font-face {
+	font-family: "din";
+	font-size: 200;
+	src: url( "din-light.ttf" );
+}
+
+@font-face {
+	font-family: "din";
+	fotn-size: 300;
+	src: url( "din-regular.ttf" );
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+body {
+    width: 300px;
+    height: 200px;
+
+    font-family: din;
+}
+
+.accent {
+    color: #ECC94B;
+}
+
+.background-blur {
+    background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIj48ZGVmcz48cGF0dGVybiBpZD0icGF0dGVybiIgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiB2aWV3Qm94PSIwIDAgNDAsNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSgxMzUpICI+PHJlY3QgaWQ9InBhdHRlcm4tYmFja2dyb3VuZCIgd2lkdGg9IjQwMCUiIGhlaWdodD0iNDAwJSIgZmlsbD0icmdiYSgyMzYsIDI0MCwgMjQxLDEpIj48L3JlY3Q+IDxwYXRoIGZpbGw9IiMxYTIwMmMiIGQ9IgogICAgICAgICAgICAgICAgTTAgMjkgYSA5IC05IDAgMCAwIDkgLTkgYSAxMSAtMTEgMCAwIDEgMTEgLTExIHYyIGEgLTkgOSAwIDAgMCAtOSA5IGEgLTExIDExIDAgMCAxIC0xMSAxMXoKICAgICAgICAgICAgICAgIE0wIDY5IGEgOSAtOSAwIDAgMCA5IC05IGEgMTEgLTExIDAgMCAxIDExIC0xMSB2MiBhIC05IDkgMCAwIDAgLTkgOSBhIC0xMSAxMSAwIDAgMSAtMTEgMTF6CiAgICAgICAgICAgICAgIj48L3BhdGg+PHBhdGggZmlsbD0iI2VjYzk0YiIgZD0iTTIwIDI5LjUgYSA5LjUgLTkuNSAwIDAgMCA5LjUgLTkuNSBhIDEwLjUgLTEwLjUgMCAwIDEgMTAuNSAtMTAuNSB2MSBhIC05LjUgOS41IDAgMCAwIC05LjUgOS41IGEgLTEwLjUgMTAuNSAwIDAgMSAtMTAuNSAxMC41eiI+PC9wYXRoPjwvcGF0dGVybj4gIDwvZGVmcz4gPHJlY3QgZmlsbD0idXJsKCNwYXR0ZXJuKSIgaGVpZ2h0PSIxMDAlIiB3aWR0aD0iMTAwJSI+PC9yZWN0Pjwvc3ZnPg==");
+    z-index: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    filter: blur( 3px );
+}
+
+.container {
+    background-color: rgba( 0, 0, 0, 0.5 );
+
+    display: flex;
+
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+
+    color: #ffffff;
+    font-weight: bold;
+
+    z-index: 1;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-size: 30px;
+    margin: 20px 0 0 0;
+}
+
+h2 {
+    font-size: 16px;
+    margin: 0;
+}
+
+.input {
+    margin: 20px 0;
+}
+
+#number {
+    width: 50px;
+    text-align: center;
+    font-size: 50px;
+    background-color: #ECC94B;
+    border: 3px solid #000000;
+    outline: 2px solid #ECC94B;
+}
